@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> All Product - RedStore </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Home">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+</head>
+<body>
+    <div class="container">
+<div class="navbar">
+    <div class="logo">
+        <img src="c:\Users\JP\Downloads\logo.p.png" width="125px">
+    </div>
+        <nav>
+            <ul>
+                        
+                <li> <a herf="">Home</a></li>
+                <li> <a href=""> Product</a></li>
+                <li> <a href=""> About</a></li>
+                <li> <a href=""> Contact</a></li>
+                <li> <a href=""> Account</a></li>
+            </ul>
+        </nav>
+         <img src="c:\Users\JP\Downloads\cart.png" width="30px" height="30px">
+        <img src="c:\Users\JP\Downloads\Menu-Icon-PNG-File.png" height="50px" width="50px" class="menu-icon">
+    </div>
+    </div>
+    <!--------single product details---------->
+    <div class="small-container  single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="10002.jpg" width="100%" id="ProductImg"/>
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                   <img src="10001.jpg" width="100%"  class="small-img"/>
+                    </div>
+                     <div class="small-img-col">
+                    <img src="shoes1.jfif" width="100%" class="small-img"/>
+                    </div>
+                     <div class="small-img-col">
+                    <img src="shoes2.jfif" width="100%" class="small-img"/>
+                    </div>
+                     <div class="small-img-col">
+                    <img src="10002.jpg"width="100%"  class="small-img"/>
+                    </div>
+                </div>
+            </div>
+                <div class="col-2">
+                    <p>Black  Shoes </p>
+                <h1>Black Sports Shoes</h1>
+                <h3>$50.00</h3>
+                <select>
+                    <option>Slect Size</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+                <input type="number" value="1">
+                <a href="payment.html" class="btn">Add to Cart</a>
+                <h3>Product Details</h3><br>
+                <p>Give your summer wardrobe a style upgrade with the sports
+                    Men's Shoes. Team it with a pair of shorts for 
+                    your morning workout or a denime for an evening out with
+                    the guys </p>
+            </div>
+        </div>
+    </div>
+    <!-------titel------->
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Related Product</h2>
+            <p>view more</p>
+        </div> 
+        <!--------product--------->
+    <div class="small-container"> 
+     <div class="row">
+    <div class="col-4">
+        <img src="c:\Users\JP\Downloads\product-9.jpg">
+        <h4>Black Band Watch</h4>
+        <p>$40.00</p>
+    </div>
+     <div class="col-4">
+        <img src="c:\Users\JP\Downloads\product-10.jpg">
+        <h4>Sports Shoes</h4>
+        <p>$80.00</p>
+    </div>
+     <div class="col-4">
+        <img src="c:\Users\JP\Downloads\product-11.jpg">
+        <h4>Men Shoes</h4>
+        <p>$50.00</p>
+    </div>
+     <div class="col-4">
+        <img src="c:\Users\JP\Downloads\product-12.jpg">
+        <h4>Black Lower</h4>
+        <p>$50.00</p>
+    </div>
+    </div>
+   
+    </div>
+<!--------footer-------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="c:\Users\JP\Downloads\play-store.png">
+                    <img src="c:\Users\JP\Downloads\app-store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="c:\Users\JP\Downloads\logo.p.png" width="125px">
+                <p>Our Purpose Is To Sustainably Make th Pleasure and 
+                    Benefits of Sports Accessible to the Many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+            <ul>
+                <li> Coupons</li>
+                <li>Blog Post</li>
+                <li>Return Policy</li>
+                <li>Join Affiliate</li>
+               
+            </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Useful Links</h3>
+            <ul>
+                <li> Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>youTube</li>
+               
+            </ul>
+            </div>
+            <div class="box"></div>
+            <p class="Copyright">Copyright 2025-Easy Tutorials</p>
+        </div>
+    </div>
+</div>
+<!------js for product------->
+<script>
+var ProductImg = document.getElementById("ProductImg");
+var SmallImg =document.getElementsByClassName("small-img");
+SmallImg[0].onclick =function()
+{
+   ProductImg.src = SmallImg[0].src
+}
+SmallImg[1].onclick =function()
+{
+   ProductImg.src = SmallImg[1].src
+}
+SmallImg[2].onclick =function()
+{
+   ProductImg.src = SmallImg[2].src
+}
+SmallImg[3].onclick =function()
+{
+   ProductImg.src = SmallImg[3].src
+}
+SmallImg[4].onclick =function()
+{
+   ProductImg.src = SmallImg[4].src
+}
+</script>
+</body>
+</html>
+   
