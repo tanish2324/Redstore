@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login & Registration</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f4f4;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:white;
+padding:30px;
+width:300px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+h2{
+text-align:center;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+}
+
+button{
+width:100%;
+padding:10px;
+background:red;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.link{
+text-align:center;
+margin-top:10px;
+cursor:pointer;
+color:blue;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2 id="formTitle">Login</h2>
+
+<div id="loginForm">
+
+<input type="text" id="loginUser" placeholder="Username">
+<input type="password" id="loginPass" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<div class="link" onclick="showRegister()">Create Account</div>
+
+</div>
+
+
+<div id="registerForm" style="display:none;">
+
+<input type="text" id="regUser" placeholder="Username">
+<input type="email" id="regEmail" placeholder="Email">
+<input type="password" id="regPass" placeholder="Password">
+
+<button onclick="register()">Register</button>
+
+<div class="link" onclick="showLogin()">Already have account?</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function register(){
+
+let user = document.getElementById("regUser").value;
+let email = document.getElementById("regEmail").value;
+let pass = document.getElementById("regPass").value;
+
+if(user=="" || email=="" || pass==""){
+alert("Fill all fields");
+return;
+}
+
+localStorage.setItem("username",user);
+localStorage.setItem("password",pass);
+
+alert("Registration Successful");
+
+showLogin();
+
+}
+
+
+function login(){
+
+let user = document.getElementById("loginUser").value;
+let pass = document.getElementById("loginPass").value;
+
+let savedUser = localStorage.getItem("username");
+let savedPass = localStorage.getItem("password");
+
+if(user===savedUser && pass===savedPass){
+
+alert("Login Successful");
+
+window.location.href="index.html";
+
+}else{
+
+alert("Invalid Login");
+
+}
+
+}
+
+
+function showRegister(){
+
+document.getElementById("loginForm").style.display="none";
+document.getElementById("registerForm").style.display="block";
+document.getElementById("formTitle").innerText="Register";
+
+}
+
+function showLogin(){
+
+document.getElementById("loginForm").style.display="block";
+document.getElementById("registerForm").style.display="none";
+document.getElementById("formTitle").innerText="Login";
+
+}
+
+</script>
+
+</body>
+</html>
+
